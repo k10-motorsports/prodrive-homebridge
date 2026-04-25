@@ -123,7 +123,6 @@ When enabled (default), lights blink for:
 ### Build from source
 
 ```bash
-cd homebridge-plugin
 npm install
 npm run build
 ```
@@ -140,12 +139,11 @@ When the plugin isn't published to npm yet, deploy directly from the repo:
 
 ```bash
 # 1. Install dev dependencies and build
-cd homebridge-plugin
 npm install
 npm run build
 
 # 2. Copy the built plugin into Homebridge's plugin directory
-sudo cp -r /path/to/racecor-plugins/homebridge-plugin \
+sudo cp -r /path/to/prodrive-homebridge \
     /var/lib/homebridge/node_modules/homebridge-racecor-lights
 
 # 3. Fix ownership (Homebridge runs as the homebridge user)

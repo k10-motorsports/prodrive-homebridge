@@ -5,7 +5,7 @@ The Homebridge plugin (`homebridge-k10-motorsports-lights`) is a TypeScript Dyna
 ## Source Structure
 
 ```
-homebridge-plugin/
+prodrive-homebridge/
 ├── src/
 │   ├── index.ts              Plugin registration with Homebridge
 │   ├── platform.ts           Platform class: polling loop, accessory management
@@ -145,7 +145,6 @@ The plugin is designed to fail silently and recover automatically:
 ## Building and Testing
 
 ```bash
-cd homebridge-plugin
 npm install
 npm run build          # Compile TypeScript → dist/
 npm test              # Run Jest test suite (133 tests)

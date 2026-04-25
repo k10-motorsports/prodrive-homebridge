@@ -9,7 +9,7 @@ A complete Homebridge platform plugin has been created to integrate SimHub RaceC
 ### Plugin Structure
 
 ```
-homebridge-plugin/
+prodrive-homebridge/
 ├── src/
 │   ├── index.ts                  # Plugin registration with Homebridge
 │   ├── settings.ts               # Platform and plugin identifiers
@@ -188,7 +188,6 @@ Provides a UI form in Homebridge with:
 
 1. Build the TypeScript:
    ```bash
-   cd homebridge-plugin
    npm install
    npm run build
    ```
@@ -230,9 +229,8 @@ Provides a UI form in Homebridge with:
 
 ## File Locations
 
-All files are located at:
-- Homebridge plugin: `homebridge-plugin/`
-- SimHub plugin update: `plugin/RaceCorProDrive.Plugin/Plugin.cs`
+- Homebridge plugin source: this repository (`prodrive-homebridge`)
+- SimHub plugin source: [k10-motorsports/prodrive-plugin](https://github.com/k10-motorsports/prodrive-plugin) — `racecor-plugin/simhub-plugin/`
 
 ## Testing
 
