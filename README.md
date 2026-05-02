@@ -1,6 +1,8 @@
 # Homebridge RaceCorProDrive Lights Plugin
 
-Part of the [RaceCorProDrive](https://github.com/alternatekev/media-coach-simhub-plugin) sim racing platform. This Homebridge plugin maps real-time telemetry from the RaceCorProDrive SimHub plugin to Apple HomeKit smart lights — race flags, proximity warnings, commentary severity, and strategy calls all drive light color and brightness in real-time.
+Part of the [RaceCor Pro Drive](https://racecor.io) sim racing platform. This Homebridge plugin maps real-time telemetry from the [SimHub plugin](https://github.com/k10-motorsports/prodrive-plugin) to Apple HomeKit smart lights — race flags, proximity warnings, commentary severity, and strategy calls all drive light color and brightness in real-time.
+
+> **Note:** This plugin polls SimHub directly on **port 8888** (SimHub's own HTTP server), not the Pro Drive plugin's port 8889. SimHub must be running with the Pro Drive plugin enabled for the right properties to be exposed.
 
 ## Features
 
@@ -197,7 +199,15 @@ The plugin expects SimHub RaceCorProDrive plugin to expose these properties via 
 
 ## Part of RaceCorProDrive
 
-This plugin is one component of the RaceCorProDrive platform, which also includes a broadcast-grade transparent dashboard overlay (Electron), a real-time strategy engine, an AI commentary system, and a Next.js web presence. See the [main repository](https://github.com/alternatekev/media-coach-simhub-plugin) for the full project.
+This plugin is one component of the RaceCor Pro Drive ecosystem, which also includes:
+
+- [`prodrive-plugin`](https://github.com/k10-motorsports/prodrive-plugin) — the SimHub plugin that produces the telemetry this Homebridge plugin consumes
+- [`prodrive-overlay`](https://github.com/k10-motorsports/prodrive-overlay) — the broadcast-grade transparent Electron HUD overlay
+- [`prodrive-windows`](https://github.com/k10-motorsports/prodrive-windows) — the Pro Drive Windows desktop app
+- [`prodrive-server`](https://github.com/k10-motorsports/prodrive-server) — the racecor.io web app and API
+- The native Apple apps: [`prodrive-macos`](https://github.com/k10-motorsports/prodrive-macos), [`prodrive-ios`](https://github.com/k10-motorsports/prodrive-ios), [`prodrive-tvos`](https://github.com/k10-motorsports/prodrive-tvos)
+
+See the [user-facing support site](https://support.racecor.io) for end-user documentation across the whole ecosystem.
 
 ## License
 
